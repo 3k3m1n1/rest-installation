@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class DimLightinstantiate : MonoBehaviour
 {
-    public GameObject[] prefabInstantiate;
+    public GameObject prefabInstantiate;
     //public GameObject ObjectToInstantiateON;
 
-    public Transform pos;
-
-    public int randomInt;
+    public int width = 10;
+    public int height = 4;
 
     // Start is called before the first frame update
     void Start()
@@ -25,8 +24,13 @@ public class DimLightinstantiate : MonoBehaviour
 
     void SpawnLightBall()
     {
-        randomInt = Random.Range(0, prefabInstantiate.Length);
-        Instantiate(prefabInstantiate[randomInt], pos.position, pos.rotation);
+        for (int y = 0; y < height; ++y)
+        {
+            for (int x = 0; x < width; ++x)
+            {
+                Instantiate(prefabInstantiate, new Vector3(x, y, 0), Quaternion.identity);
+            }
+        }
     }
 
     
