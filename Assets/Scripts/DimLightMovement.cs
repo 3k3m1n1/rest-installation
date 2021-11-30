@@ -10,7 +10,7 @@ public class DimLightMovement : MonoBehaviour
     public float timer;
     public float speed;
     
-    //GameObject lightBall;
+    //public GameObject lightBall;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +21,7 @@ public class DimLightMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //lightBall.SetActive(true);
         StartCoroutine(Movement());
     }
 

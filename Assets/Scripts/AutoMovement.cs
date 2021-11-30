@@ -5,6 +5,8 @@ using UnityStandardAssets.Characters.FirstPerson;
 
 public class AutoMovement : MonoBehaviour
 {
+    //Think of using Waypoints the next time you visit this script.
+
     public GameObject target;
 
     //public CharacterController CC;
