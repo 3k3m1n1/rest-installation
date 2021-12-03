@@ -9,27 +9,55 @@ public class AutoMovement : MonoBehaviour
 
     public GameObject target;
 
-    //public CharacterController CC;
-    //public Rigidbody rb;
-    //public FirstPersonController FPC;
+    public GameObject[] wayPoints;
 
-    //public Collider StartTrigger;
-    //public Collider ExitTrigger;
+    public int currentPoint;
+
+    public float speed;
+
+    public bool isGrinding;
+
+    //public CharacterController CC;
+    public Rigidbody rb;
+    //public FirstPersonController FPC;
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
+        MovingAlongWayPoints();
+    }
+
+    void MovingAlongWayPoints()
+    {
+        if (isGrinding)
+        {
+            transform.position = Vector3.Lerp(Vector3.up, Vector3.forward, speed * Time.deltaTime);
+            if (Vector3.Distance(transform.position, wayPoints[currentPoint].transform.position) < 1)
+            {
+                currentPoint++;
+            }
+        }
+
         
     }
 
-    void OnTriggerStay(Collider other)
+    void OnTriggerEnter(Collider other)
     {
+
+        if (other.gameObject.tag == "Player")
+        {
+            Debug.Log("Waypoint works");
+            isGrinding = true;
+        }
+
+        /*
         if (other.gameObject.tag == "StartTrigger")
         {
             target.SetActive(false);
@@ -41,9 +69,9 @@ public class AutoMovement : MonoBehaviour
             target.transform.Translate(Vector3.up * Time.deltaTime, Space.World);
             Debug.Log("Start Trigger works");
         }
-        
+        */
     }
-
+    /*
     void OnTriggerExit(Collider col)
     {
         if (col.gameObject.tag == "ExitTrigger")
@@ -59,5 +87,5 @@ public class AutoMovement : MonoBehaviour
         }
         
         
-    }
+    } */
 }
