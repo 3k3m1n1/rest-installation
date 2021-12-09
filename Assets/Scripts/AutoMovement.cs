@@ -11,6 +11,8 @@ public class AutoMovement : MonoBehaviour
 
     public GameObject[] wayPoints;
 
+    public GameObject Trigger;
+
     public int currentPoint;
 
     public float speed;
@@ -38,6 +40,10 @@ public class AutoMovement : MonoBehaviour
     {
         if (isGrinding)
         {
+            //target.SetActive(false);
+            GameObject.Find("Player").GetComponent<FirstPersonController>().enabled = false;
+            GameObject.Find("Player").GetComponent<CharacterController>().enabled = false;
+            GameObject.Find("Player").GetComponent<Rigidbody>().isKinematic = false;
             transform.position = Vector3.Lerp(Vector3.up, Vector3.forward, speed * Time.deltaTime);
             if (Vector3.Distance(transform.position, wayPoints[currentPoint].transform.position) < 1)
             {
@@ -60,11 +66,10 @@ public class AutoMovement : MonoBehaviour
         /*
         if (other.gameObject.tag == "StartTrigger")
         {
-            target.SetActive(false);
+            
             GameObject.Find("Player").GetComponent<FirstPersonController>().enabled = false;
             GameObject.Find("Player").GetComponent<CharacterController>().enabled = false;
             GameObject.Find("Player").GetComponent<Rigidbody>().isKinematic = true;
-
             target.transform.Translate(Vector3.forward * Time.deltaTime);
             target.transform.Translate(Vector3.up * Time.deltaTime, Space.World);
             Debug.Log("Start Trigger works");
@@ -77,9 +82,7 @@ public class AutoMovement : MonoBehaviour
         if (col.gameObject.tag == "ExitTrigger")
         {
             target.SetActive(true);
-            GameObject.Find("Player").GetComponent<FirstPersonController>().enabled = true;
-            GameObject.Find("Player").GetComponent<CharacterController>().enabled = true;
-            GameObject.Find("Player").GetComponent<Rigidbody>().isKinematic = false;
+            
 
             
 
