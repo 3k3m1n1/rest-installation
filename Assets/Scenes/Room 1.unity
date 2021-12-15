@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.43827397, g: 0.48630834, b: 0.5665857, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1266,7 +1266,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh31172
+  m_Name: pb_Mesh22280
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4334,7 +4334,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh32508
+  m_Name: pb_Mesh23616
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -31055,8 +31055,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1120548912}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.9264069, y: -1.122788, z: -35.992218}
+  m_LocalRotation: {x: -0.10937388, y: -0.00000017881392, z: -0.0020629913, w: 0.9939985}
+  m_LocalPosition: {x: -1.9264069, y: -11.53, z: -35.992218}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 467181228}
@@ -31071,7 +31071,7 @@ Transform:
   - {fileID: 1930711020}
   m_Father: {fileID: 1359788588}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -12.558001, y: 0.026, z: -0.24100001}
 --- !u!1 &1123163000 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1537614109046169547, guid: 7acc5b094206f6d46a081e828db1d5c1,
@@ -57146,13 +57146,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1881406469}
-  m_LocalRotation: {x: 0.1873232, y: -0, z: -0, w: 0.9822984}
+  m_LocalRotation: {x: 0.12573332, y: -0.00022023916, z: -0.0011548549, w: 0.9920634}
   m_LocalPosition: {x: -5.388, y: -7.2908, z: 11.433}
   m_LocalScale: {x: 0.13344933, y: 0.13661, z: 0.07813157}
   m_Children: []
   m_Father: {fileID: 1359788588}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 21.593, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 14.446001, y: -0.043, z: -0.13900001}
 --- !u!65 &1881406475
 BoxCollider:
   m_ObjectHideFlags: 0
